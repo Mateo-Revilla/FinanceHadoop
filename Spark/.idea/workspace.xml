@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab50cb04-fd21-4d5f-a038-cda2135a7d1f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1ktccm5mPjNDZOAerWtwP6Uipsx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Scala" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/scala" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.test">
+    <configuration name="DecisionTreeClassificationExample" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.apache.spark.examples.ml.DecisionTreeClassificationExample" />
+      <module name="Spark" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.apache.spark.examples.ml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaiveBayesExample" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="NaiveBayesExample" />
+      <module name="Spark" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="helloworld" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="helloworld" />
+      <module name="Spark" />
+      <option name="VM_PARAMETERS" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="Spark" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="SbtRunConfiguration" factoryName="sbt Task" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="tasks" value="" />
+      <option name="useSbtShell" value="false" />
+      <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.helloworld" />
+      <item itemvalue="sbt Task.Unnamed" />
+      <item itemvalue="Application.NaiveBayesExample" />
+      <item itemvalue="Application.DecisionTreeClassificationExample" />
+      <item itemvalue="Application.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.helloworld" />
+        <item itemvalue="Application.DecisionTreeClassificationExample" />
+        <item itemvalue="Application.NaiveBayesExample" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Spark" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="spark [file:/Users/mateo/Documents/NYU/Fall%202020/Big%20Data/Project/Spark/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="Spark-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/build.sbt" value="499891402" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="2620759781" />
+      </map>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab50cb04-fd21-4d5f-a038-cda2135a7d1f" name="Default Changelist" comment="" />
+      <created>1606523409743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606523409743</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1227" y="-807" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1606601338536">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1227" y="-807" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606601338536" />
+    <state x="704" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606524395186">
+      <screen x="0" y="23" width="1792" height="1021" />
+    </state>
+    <state x="704" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1606524395186" />
+    <state width="1367" height="325" key="GridCell.Tab.0.bottom" timestamp="1606612667151">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1005" height="427" key="GridCell.Tab.0.bottom/0.23.1792.1021/662.-1057.1920.1057@0.23.1792.1021" timestamp="1606596552417" />
+    <state width="1367" height="325" key="GridCell.Tab.0.bottom/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667151" />
+    <state width="1005" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1021@0.23.1792.1021" timestamp="1606527531711" />
+    <state width="1367" height="333" key="GridCell.Tab.0.bottom/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606609514633" />
+    <state width="1367" height="325" key="GridCell.Tab.0.center" timestamp="1606612667150">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1005" height="427" key="GridCell.Tab.0.center/0.23.1792.1021/662.-1057.1920.1057@0.23.1792.1021" timestamp="1606596552416" />
+    <state width="1367" height="325" key="GridCell.Tab.0.center/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667150" />
+    <state width="1005" height="263" key="GridCell.Tab.0.center/0.23.1792.1021@0.23.1792.1021" timestamp="1606527531710" />
+    <state width="1367" height="333" key="GridCell.Tab.0.center/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606609514632" />
+    <state width="1367" height="325" key="GridCell.Tab.0.left" timestamp="1606612667150">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1005" height="427" key="GridCell.Tab.0.left/0.23.1792.1021/662.-1057.1920.1057@0.23.1792.1021" timestamp="1606596552415" />
+    <state width="1367" height="325" key="GridCell.Tab.0.left/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667150" />
+    <state width="1005" height="263" key="GridCell.Tab.0.left/0.23.1792.1021@0.23.1792.1021" timestamp="1606527531709" />
+    <state width="1367" height="333" key="GridCell.Tab.0.left/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606609514632" />
+    <state width="1367" height="325" key="GridCell.Tab.0.right" timestamp="1606612667151">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1005" height="427" key="GridCell.Tab.0.right/0.23.1792.1021/662.-1057.1920.1057@0.23.1792.1021" timestamp="1606596552416" />
+    <state width="1367" height="325" key="GridCell.Tab.0.right/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667151" />
+    <state width="1005" height="263" key="GridCell.Tab.0.right/0.23.1792.1021@0.23.1792.1021" timestamp="1606527531710" />
+    <state width="1367" height="333" key="GridCell.Tab.0.right/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606609514633" />
+    <state width="1367" height="325" key="GridCell.Tab.1.bottom" timestamp="1606612667153">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1367" height="325" key="GridCell.Tab.1.bottom/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667153" />
+    <state width="1367" height="325" key="GridCell.Tab.1.center" timestamp="1606612667152">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1367" height="325" key="GridCell.Tab.1.center/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667152" />
+    <state width="1367" height="325" key="GridCell.Tab.1.left" timestamp="1606612667151">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1367" height="325" key="GridCell.Tab.1.left/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667151" />
+    <state width="1367" height="325" key="GridCell.Tab.1.right" timestamp="1606612667152">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1367" height="325" key="GridCell.Tab.1.right/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606612667152" />
+    <state x="1454" y="-935" key="SettingsEditor" timestamp="1606608856423">
+      <screen x="662" y="-1057" width="1920" height="981" />
+    </state>
+    <state x="1454" y="-926" key="SettingsEditor/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606597375154" />
+    <state x="739" y="150" key="SettingsEditor/0.23.1792.1021@0.23.1792.1021" timestamp="1606527343922" />
+    <state x="1454" y="-935" key="SettingsEditor/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606608856423" />
+    <state x="943" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1606523412878">
+      <screen x="0" y="23" width="1792" height="1021" />
+    </state>
+    <state x="943" y="344" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1606523412878" />
+    <state x="1799" y="-1057" width="833" height="596" key="dock-window-1" timestamp="1606611442353">
+      <screen x="662" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1799" y="-1057" width="833" height="596" key="dock-window-1/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606611442353" />
+    <state x="1799" y="-1057" width="833" height="596" key="dock-window-1/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606604331617" />
+    <state x="1137" y="23" width="833" height="596" key="dock-window-1/0.23.1920.981@0.23.1920.981" timestamp="1606610249385" />
+  </component>
+</project>
