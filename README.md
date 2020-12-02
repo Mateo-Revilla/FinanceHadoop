@@ -90,6 +90,7 @@ covid
    ├── total-cases             # Counts the number of covid cases in US, input file - `covid-data-clean.csv`
    ├── total-daily             # Transforms `covid-data-clean.csv` to total daily data 
    └── weekly-cases            # Transforms clean covid data to weekly covid data, input file - `covid-data-clean.csv`
+|   
 ├── analysis                   # Counts the number of covid cases in US, input file - `covid-data-clean.csv`
    ├── mapreduce               # 4 mappers and 1 reducer, 4 different jobs, produce separate output for each, input file - `all.csv`
    └── plotter.py              # Output of each mapreduce jobs for `mapreduce` should be fed in plotter to create a chart
