@@ -99,7 +99,7 @@ For analysis, run each mapper with the reducer separately and input the output s
 For data processing, check the file structure comments 
 
  
-## Kate
+## Amazon and Government Restrictions (Lockdown) (Kate)
 
 **Description**
 
