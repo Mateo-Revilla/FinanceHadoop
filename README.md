@@ -1,6 +1,6 @@
 # Finance Big Data
 
-For this project we used different Big Data tools including Hadoop Map Reduce, HiveSQL, and Spark to process and analyse data for amazon stock, walmart stock, SP500, and Covid-19
+For this project we used different Big Data tools including Hadoop Map Reduce, HiveSQL, and Spark to process and analyse data for amazon stock, walmart stock, SP500, and Covid-19.
 
 ## SP500 (Mateo)
 
@@ -66,7 +66,7 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 ### Screenshots
 
-The screenshots folder contians screenshots from the output and from the program running
+The screenshots folder contians screenshots from the output and from the program running.
 
 ## Covid (Marcus)
 
