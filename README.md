@@ -84,8 +84,23 @@ The code has 4 different mappers that have to be run separately with the reducer
 
  
 ## Kate
+
 **Description**
-My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown.
+
+My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown. It also includes covid data as an additional measure. 
+
+**Running the Program**
+
+Extensive screenshots are provided which detail how the code is run, as well as documment some of the progress in writing the code. Everything is accomplished through the use of Hive and MapReduce, and no external methods (other than Hadoop) are used, as is documented. 
+
+**Features**
+
+1. ACAPS (lockdown) data vs. AMZN stock
+2. ACAPS (lockdown) data + Covid data vs. AMZN stock
+3. ACAPS (lockdown) data vs. WMT stock
+4. ACAPS (lockdown) data + Covid data vs. WMT stock
+5. ACAPS (lockdown) data vs. Covid data 
+
 
 ## Hive (Holly)
 **Objective:**
