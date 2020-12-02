@@ -67,7 +67,7 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 The screenshots folder contians screenshots from the output and from the program running
 
-## Marcus
+## covid (Marcus)
 
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
 
@@ -99,7 +99,7 @@ For analysis, run each mapper with the reducer separately and input the output s
 For data processing, check the file structure comments 
 
  
-## Kate
+## AmazonAndLockdown(ACAP) (Kate)
 
 **Description**
 
