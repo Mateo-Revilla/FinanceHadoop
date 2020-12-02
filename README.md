@@ -91,12 +91,12 @@ covid
    ├── total-daily             # Transforms `covid-data-clean.csv` to total daily data 
    └── weekly-cases            # Transforms clean covid data to weekly covid data, input file - `covid-data-clean.csv`
 ├── analysis                   # Counts the number of covid cases in US, input file - `covid-data-clean.csv`
-   ├── mapreduce               # 4 mappers and 1 reducer, 4 different jobs, produce separate output for each
+   ├── mapreduce               # 4 mappers and 1 reducer, 4 different jobs, produce separate output for each, input file - `all.csv`
    └── plotter.py              # Output of each mapreduce jobs for `mapreduce` should be fed in plotter to create a chart
 
 #### Running the program
 For analysis, run each mapper with the reducer separately and input the output stream to plotter.py to get the chart.
-For data processing, check the file structure comments 
+For data processing, check the file structure comments
 
  
 ## Amazon and Government Restrictions (Lockdown) (Kate)
