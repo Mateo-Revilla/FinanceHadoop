@@ -1,5 +1,21 @@
 # Finance Big Data
 
+## SP500 (Mateo)
+
+### Description
+
+We used t
+
+### Data Ingestion
+
+### Data Cleaning and Profiling
+
+### Screenshots
+
+### Running MapReduce in Dumbo
+
+
+
 ## Spark MlLib (Mateo)
 
 ### Description
