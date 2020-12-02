@@ -50,17 +50,17 @@ We are using datasets from the clean_data_source folder which contains 4 csv fil
 For the comparison between stocks, we are looking at Amazon and Walmart separately using S&P 500 as a baseline for the general economic performance during covid, and we are also comparing Amazon and Walmart to see the differences between how they perform under the influence of covid.
 
 Attatchment folder explaination:
-1. [DataCleaning](DataCleaning/): Data cleaning code with sample original input file WMT.csv (for walmart) downloaded from yahoo.finance.com. The result of data cleaning is stored in the folder (cleaned_data_source). If you want to reproduce analytic from the same data, you can skip the cleaning step and use the clean data from there
+1. [DataCleaning](hive/DataCleaning/): Data cleaning code with sample original input file WMT.csv (for walmart) downloaded from yahoo.finance.com. The result of data cleaning is stored in the folder (cleaned_data_source). If you want to reproduce analytic from the same data, you can skip the cleaning step and use the clean data from there
 
-2. [TerminalOutput.txt](TerminalOutput.txt): terminal output in txt format (just for reference of what the commandline printout should look like when you do the right steps, to reproduce the analytic please still follow instructions below, make sure to configure the directory accordingly)
+2. [TerminalOutput.txt](hive/TerminalOutput.txt): terminal output in txt format (just for reference of what the commandline printout should look like when you do the right steps, to reproduce the analytic please still follow instructions below, make sure to configure the directory accordingly)
 
-3. [commandline_screenshots](commandline_screenshots/): screenshots of terminal command, you should not need to use this at all because everything is documented in (2), just a prove that the code works
+3. [commandline_screenshots](hive/commandline_screenshots/): screenshots of terminal command, you should not need to use this at all because everything is documented in (2), just a prove that the code works
 
-4. [results](results/): final analyzed data obtained from hdfs, containing 6 cvs files with parameters that we created (difference between two stocks in daily percentage change of stock or daily percentage change for one stock) and the covid cases that matches the dates
+4. [results](hive/results/): final analyzed data obtained from hdfs, containing 6 cvs files with parameters that we created (difference between two stocks in daily percentage change of stock or daily percentage change for one stock) and the covid cases that matches the dates
 
-5. [comparison.xlsm](comparison.xlsm): excel spreadsheet combining all data in results folder that compares two stocks and their relation to covid, along with a trendline graph for each relation that we are looking at
+5. [comparison.xlsm](hive/comparison.xlsm): excel spreadsheet combining all data in results folder that compares two stocks and their relation to covid, along with a trendline graph for each relation that we are looking at
 
-6. [individual.xlsm](individual.xlsm): excel spreadsheet combining all data in results folder that compares single stocks and its relation to covid, along with a trendline graph for each relation that we are looking at
+6. [individual.xlsm](hive/individual.xlsm): excel spreadsheet combining all data in results folder that compares single stocks and its relation to covid, along with a trendline graph for each relation that we are looking at
 </p>
 
 
@@ -206,11 +206,11 @@ create table all as select amazon.*,walmart.*,covid.*,sp.* from amazon join walm
 ```
 
 ## Conclusion and Analysis: ##
-![walmart vs sp](walmart_s&p500.png)
-![amazon vs sp](amazon_s&p500.png)
-![amazon vs walmart](amazon_walmart.png)
-![sp500](s&p500.png)
-![amazon](amazon.png)
-![walmart](walmart.png)
+![walmart vs sp](hive/walmart_s&p500.png)
+![amazon vs sp](hive/amazon_s&p500.png)
+![amazon vs walmart](hive/amazon_walmart.png)
+![sp500](hive/s&p500.png)
+![amazon](hive/amazon.png)
+![walmart](hive/walmart.png)
 <p>The scatter plots show that all three stocks are fluctuant due to other factors that impact stock price besides covid, however we see that both amazon and walmart display a downward sloping trend as the number of covid cases rises, while S&P 500 stay mostly unaffected. Amazon stock goes down slightly more than walmart stock due to covid, perhaps due to the fact that Walmart sells daily essentials while more of Amazon's business is comprised of luxury goods. An assumption can be made and further explored that in terms of grocery purchasing, people still favor in-person stock Walmart to Amazon's delivery service although there is a high risk of catching the virus, perhaps due to people's need to get out of the house during the quarentine.
 </p>
