@@ -33,7 +33,9 @@ Each model has a corresponding array holding the accuracy results for each run a
 ### Input and output
 
 The job takes as input the file data.txt which is in csv format and from it generates a  RDD containing a collection of LabeledPoints. It then outputs the average accuracy for each model and accuracy results for each run to output.txt.
-**Running the program
+
+### Running the program
+
 This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
 
 ## Marcus
