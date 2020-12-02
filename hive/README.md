@@ -1,102 +1,27 @@
-# Finance Big Data
 
-<<<<<<< HEAD
-File Structure:
-   We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
-
-## SP500 (Mateo)
-
-### Description
-
-This folder contains the ingestion and running of the SP500 dataset
-
-### Data Ingestion
-
-The data ingestion folder contains a PDF with the isntruction on how the data was ingested first by downloading it from Yahoo and then transfering it to HDFS
-
-### Data Cleaning and Profiling
-
-In order to clean and profile the data a map Reduce job was done. It is contained under the folder Map Reduce Cleaning and Profiling. In this job we calculated the SP500 daily price fluctuation and daily price change.
-
-### Screenshots
-
-The screenshots folder contains screenshots of the Map Reduce Job running.
-
-### Running MapReduce in Dumbo
-
-hadoop jar clean.jar Clean /user/mr5246/FinanceProject/SP500.csv /user/mr5246/FinanceProject/newOutput/cleanSP500
-
-=======
->>>>>>> 376d7b3f82da98a026674cd2a6e265ea25b80d2e
-## Spark MlLib (Mateo)
-
-### Description
-
-The spark folder contains a machine learning job written in Scala using Spark MlLib.
-The functionality of this job is to use machine learning to try and see to what extent amazon stock's price is predictable by Walmart Stock Price, SP500, and Covid data.
-
-### Machine Learning Algorithms
-
-The Scala job runs three different Classification Machine Learning algorithms: Naive Bayes, Logistic Regression, and Random Forest.
-
-### Labels and Feutures
-
-Label:
-Amazon's stocks price daily change. 0 - Negative change. 1 - Positive change.
-Features:
-1. Amazon Stock's price daily fluctuation
-2. Walmart's stocks price positive daily change
-3. Walmart's stocks price negative daily change
-4. Covid daily cases count
-5. Covid daily deaths count
-6. SP500's price positive daily change
-7. SP500's price negative daily change
-8. SP500's price daily fluctuation
-
-### Training Models and Testing
-
-All three machine learning models are trained and tested for their accuracy a total of 10 times using different seeds to separate the training 75% and testing data 25%.
-Each model has a corresponding array holding the accuracy results for each run as well as a sum variable to later calculate the average.
-
-### Input and output
-
-The job takes as input the file data.txt which is in csv format and from it generates a  RDD containing a collection of LabeledPoints. It then outputs the average accuracy for each model and accuracy results for each run to output.txt.
-
-### Running the program
-
-This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
-
-## Marcus
-**Description**
-My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
-
-The code has 4 different mappers that have to be run separately with the reducer to produce 4 different outputs.
-
-1. COVID cases vs S&P 500 change
-2. COVID deaths vs S&P 500 change
-3. COVID cases vs S&P 500 fluctuation
-4. COVID deaths vs S&P 500 fluctuation
-
- The input data is in covid-vs-sp500 folder, a file called `all.csv`. The outputs of the mapreduce pairs should be fed in to 
- plotter.py to generate plots that illustrate the relationships. 
-
- **File structure**
- [covid-clean] has COVID data exploration mapreduce mapper reducer pairs.
- [covid-vs-sp500] has COVID vs S&P 500 analysis, visualization
-
- 
-## Kate
-**Description**
-My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown.
-
-## Hive (Holly)
 **Objective:**
 <p>
-This file describe the step-by-step commandline issues to use hive to combine different datasets and calculating indexs that we designed using various fields in various datasets.
-
+This file describe the step-by-step commandline issues to use hive to combine different datasets and calculating indexs that we designed using various fields in various datasets. 
+	
 We are using datasets from the clean_data_source folder which contains 4 csv files, with daily stock prices from three stocks (Amazon, Walmart, and S&P 500)and daily cases all marked by dates. Previously, we have cleaned up the stock prices using MapReduce (code attatched in the folder DataCleaning/clean) to calculate the percentage change and percentage fluctuation from day to day. The purpose of this project is to combine the tables by dates (discarding the dates that the datasets do not have in common), and look at the relation between covid cases (as independent variables) and change in stock price of each companies (dependent variables) as well as comparing stock price change between companies as a result of covid.
 
 For the comparison between stocks, we are looking at Amazon and Walmart separately using S&P 500 as a baseline for the general economic performance during covid, and we are also comparing Amazon and Walmart to see the differences between how they perform under the influence of covid.
+
+Attatchment folder explaination:
+1. [DataCleaning](DataCleaning/): Data cleaning code with sample original input file WMT.csv (for walmart) downloaded from yahoo.finance.com. The result of data cleaning is stored in the folder (cleaned_data_source). If you want to reproduce analytic from the same data, you can skip the cleaning step and use the clean data from there
+
+2. [TerminalOutput.txt](TerminalOutput.txt): terminal output in txt format (just for reference of what the commandline printout should look like when you do the right steps, to reproduce the analytic please still follow instructions below, make sure to configure the directory accordingly)
+
+3. [commandline_screenshots](commandline_screenshots/): screenshots of terminal command, you should not need to use this at all because everything is documented in (2), just a prove that the code works
+
+4. [results](results/): final analyzed data obtained from hdfs, containing 6 cvs files with parameters that we created (difference between two stocks in daily percentage change of stock or daily percentage change for one stock) and the covid cases that matches the dates
+
+5. [comparison.xlsm](comparison.xlsm): excel spreadsheet combining all data in results folder that compares two stocks and their relation to covid, along with a trendline graph for each relation that we are looking at
+
+6. [individual.xlsm](individual.xlsm): excel spreadsheet combining all data in results folder that compares single stocks and its relation to covid, along with a trendline graph for each relation that we are looking at
+</p>
+
+	
 
 **Step 1. Setup codes:**
 ```
@@ -107,6 +32,7 @@ use sc6220;
 
 **Step 2. put file into hdfs**
 ```
+hdfs dfs -mkdir /user/sc6220/hiveInput
 hdfs dfs -mkdir /user/sc6220/hiveInput/amazon
 hdfs dfs -mkdir /user/sc6220/hiveInput/walmart
 hdfs dfs -mkdir /user/sc6220/hiveInput/covid
@@ -115,7 +41,7 @@ hdfs dfs -mkdir /user/sc6220/hiveInput/sp500
 hdfs dfs -put amazon.csv hiveInput/amazon
 hdfs dfs -put walmart.csv hiveInput/walmart
 hdfs dfs -put cases-daily.csv hiveInput/covid
-hdfs dfs -put cleanSP500.csv hiveInput/sp500
+hdfs dfs -put SP500.csv hiveInput/sp500
 ```
 **Step 3. create hive tables**
 ```
@@ -126,6 +52,7 @@ create external table amazon(adate date, aopen float, ahigh float, alow float, a
 create external table sp(sdate date, sclose float, shigh float, sopen float, svolumn bigint, slow float,  spc float, spflux float) row format delimited fields terminated by ',' location '/user/sc6220/hiveInput/sp500';
 
 create external table covid(cdate date, infected int, death int) row format delimited fields terminated by ',' location '/user/sc6220/hiveInput/covid';
+
 ```
 
 *issues:*
@@ -155,7 +82,7 @@ create table asc as select amazon.*,sp.*,covid.* from amazon join sp on (amazon.
 
 **Step 5. Create new result tables with calculated independent and dependent variable pairs we are looking at**
 Compare difference of percentage stock price change:
-
+	
 (1) rawc: {%change amazon - %change walmart, covid infection}
 ```
 create table rawc as select infected, (apc - wpc) as diff_pc from awc;
@@ -213,7 +140,6 @@ create a new directory in dumbo to store result from hdfs:
 hdfs dfs -get /user/sc6220/output/awc/awc.csv
 hdfs dfs -get /user/sc6220/output/asc/asc.csv
 hdfs dfs -get /user/sc6220/output/wsc/wsc.csv
-
 hdfs dfs -get /user/sc6220/output/ac/ac.csv
 hdfs dfs -get /user/sc6220/output/wc/wc.csv
 hdfs dfs -get /user/sc6220/output/sc/sc.csv
@@ -227,23 +153,25 @@ hdfs dfs -get /user/sc6220/output/sc/sc.csv
 
 
 **Additional Code**
+
 for combining all data needed for analysis into the same csv file
 ```
 create table all as select amazon.*,walmart.*,covid.*,sp.* from amazon join walmart on (amazon.adate = walmart.wdate) join covid on (walmart.wdate = covid.cdate) join sp on (covid.cdate = sp.sdate);
 
-insert overwrite directory '/user/sc6220/output/all' row format delimited fields terminated by ',' lines terminated by "\n" select adate,apflux, apc,wpflux,wpc,spflux,spc,infected,death from all;
+insert overwrite directory '/user/sc6220/output/all' row format delimited fields terminated by ',' lines terminated by "\n" select adate,apflux, apc,wpflux,wpc,spflux,spc,infected,death from all order by adate;
 
 hadoop fs -mv /user/sc6220/output/all/000000_0 /user/sc6220/output/all/all.csv
 
 hdfs dfs -get /user/sc6220/output/all/all.csv
 ```
-
+	
 ## Conclusion and Analysis: ##
-![walmart vs sp](additional/hive/walmart_s&p500.png)
-![amazon vs sp](additional/hive/amazon_s&p500.png)
-![amazon vs walmart](additional/hive/amazon_walmart.png)
-![sp500](additional/hive/s&p500.png)
-![amazon](additional/hive/amazon.png)
-![walmart](additional/hive/walmart.png)
+![walmart vs sp](walmart_sp.png)
+![amazon vs sp](amazon_sp.png)
+![amazon vs walmart](amazon_walmart.png)
+![sp500](sp500.png)
+![amazon](amazon.png)
+![walmart](walmart.png)
 <p>The scatter plots show that all three stocks are fluctuant due to other factors that impact stock price besides covid, however we see that both amazon and walmart display a downward sloping trend as the number of covid cases rises, while S&P 500 stay mostly unaffected. Amazon stock goes down slightly more than walmart stock due to covid, perhaps due to the fact that Walmart sells daily essentials while more of Amazon's business is comprised of luxury goods. An assumption can be made and further explored that in terms of grocery purchasing, people still favor in-person stock Walmart to Amazon's delivery service although there is a high risk of catching the virus, perhaps due to people's need to get out of the house during the quarentine.
 </p>
+
