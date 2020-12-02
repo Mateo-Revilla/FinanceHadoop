@@ -1,15 +1,15 @@
-#Finance Big Data
+# Finance Big Data
 ## Spark MlLib (Mateo)
-###Description
+**Description**
 <p>
 The spark folder contains a machine learning job written in Scala using Spark MlLib.
 The functionality of this job is to use machine learning to try and see to what extent amazon stock's price is predictable by Walmart Stock Price, SP500, and Covid data.
 </p>
-###Machine Learning Algorithms
+**Machine Learning Algorithms**
 <p>
 The Scala job runs three different Classification Machine Learning algorithms: Naive Bayes, Logistic Regression, and Random Forest.
 </p>
-###Labels and Feutures
+**Labels and Feutures**
 <p>
 Label:
 Amazon's stocks price daily change. 0 - Negative change. 1 - Positve change.
@@ -23,18 +23,18 @@ Feutures:
 7. SP500's price negative daily change
 8. SP500's price daily fluctuation
 </p>
-###Training Models and Testing
+**Training Models and Testing**
 <p>
 All three machine learning models are trained and tested for their accuracy a total of 10 times using different seeds to separate the training 75% and testing data 25%.
 Each model has a corresponding array holding the accuracy results for each run as well as a sum variable to later calculate the average.
 </p>
-###Input and output
+**Input and output**
 The job takes as input the file data.txt which is in csv format and from it generates a  RDD containing a collection of LabeledPoints. It then outputs the average accuracy for each model and accuracy results for each run to output.txt.
-###Running the program
+**Running the program**
 This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
 
 ## Marcus
-##Kate
+## Kate
 ## Hive (Holly)
 **Objective:**
 <p>
