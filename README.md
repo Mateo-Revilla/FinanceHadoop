@@ -1,6 +1,5 @@
 # Finance Big Data
 
-<<<<<<< HEAD
 File Structure:
    We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
 
@@ -26,8 +25,7 @@ The screenshots folder contains screenshots of the Map Reduce Job running.
 
 hadoop jar clean.jar Clean /user/mr5246/FinanceProject/SP500.csv /user/mr5246/FinanceProject/newOutput/cleanSP500
 
-=======
->>>>>>> 376d7b3f82da98a026674cd2a6e265ea25b80d2e
+
 ## Spark MlLib (Mateo)
 
 ### Description
