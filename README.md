@@ -3,6 +3,29 @@
 File Structure:
    We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
 
+## SP500 (Mateo)
+
+### Description
+
+This folder contains the ingestion and running of the SP500 dataset
+
+### Data Ingestion
+
+The data ingestion folder contains a PDF with the isntruction on how the data was ingested first by downloading it from Yahoo and then transfering it to HDFS
+
+### Data Cleaning and Profiling
+
+In order to clean and profile the data a map Reduce job was done. It is contained under the folder Map Reduce Cleaning and Profiling. In this job we calculated the SP500 daily price fluctuation and daily price change.
+
+### Screenshots
+
+The screenshots folder contains screenshots of the Map Reduce Job running.
+
+### Running MapReduce in Dumbo
+
+hadoop jar clean.jar Clean /user/mr5246/FinanceProject/SP500.csv /user/mr5246/FinanceProject/newOutput/cleanSP500
+
+
 ## Spark MlLib (Mateo)
 
 ### Description
@@ -41,10 +64,47 @@ The job takes as input the file data.txt which is in csv format and from it gene
 
 This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
 
+### Screenshots
+
+The screenshots folder contians screenshots from the output and from the program running
+
 ## Marcus
-## Kate
 **Description**
-My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown.
+My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
+
+The code has 4 different mappers that have to be run separately with the reducer to produce 4 different outputs.
+
+1. COVID cases vs S&P 500 change
+2. COVID deaths vs S&P 500 change
+3. COVID cases vs S&P 500 fluctuation
+4. COVID deaths vs S&P 500 fluctuation
+
+ The input data is in covid-vs-sp500 folder, a file called `all.csv`. The outputs of the mapreduce pairs should be fed in to 
+ plotter.py to generate plots that illustrate the relationships. 
+
+ **File structure**
+ [covid-clean] has COVID data exploration mapreduce mapper reducer pairs.
+ [covid-vs-sp500] has COVID vs S&P 500 analysis, visualization
+
+ 
+## Kate
+
+**Description**
+
+My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown. It also includes covid data as an additional measure. 
+
+**Running the Program**
+
+Extensive screenshots are provided which detail how the code is run, as well as documment some of the progress in writing the code. Everything is accomplished through the use of Hive and MapReduce, and no external methods (other than Hadoop) are used, as is documented. 
+
+**Features**
+
+1. ACAPS (lockdown) data vs. AMZN stock
+2. ACAPS (lockdown) data + Covid data vs. AMZN stock
+3. ACAPS (lockdown) data vs. WMT stock
+4. ACAPS (lockdown) data + Covid data vs. WMT stock
+5. ACAPS (lockdown) data vs. Covid data 
+
 
 ## Hive (Holly)
 **Objective:**
