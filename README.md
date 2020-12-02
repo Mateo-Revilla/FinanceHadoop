@@ -68,7 +68,7 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 The screenshots folder contians screenshots from the output and from the program running
 
 ## Marcus
-**Description**
+
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
 
 The code has 4 different mappers that have to be run separately with the reducer to produce 4 different outputs.
@@ -81,9 +81,22 @@ The code has 4 different mappers that have to be run separately with the reducer
  The input data is in covid-vs-sp500 folder, a file called `all.csv`. The outputs of the mapreduce pairs should be fed in to 
  plotter.py to generate plots that illustrate the relationships. 
 
- **File structure**
- [covid-clean] has COVID data exploration mapreduce mapper reducer pairs.
- [covid-vs-sp500] has COVID vs S&P 500 analysis, visualization
+#### File Structure
+
+covid
+├── data-processing
+   ├── clean                   # MapReduce job that cleans `us-covid.csv` to `covid-data-clean.csv`
+   ├── count                   # Counts the number of rows in an arbitrary input file
+   ├── total-cases             # Counts the number of covid cases in US, input file - `covid-data-clean.csv`
+   ├── total-daily             # Transforms `covid-data-clean.csv` to total daily data 
+   └── weekly-cases            # Transforms clean covid data to weekly covid data, input file - `covid-data-clean.csv`
+├── analysis                   # Counts the number of covid cases in US, input file - `covid-data-clean.csv`
+   ├── mapreduce               # 4 mappers and 1 reducer, 4 different jobs, produce separate output for each
+   └── plotter.py              # Output of each mapreduce jobs for `mapreduce` should be fed in plotter to create a chart
+
+#### Running the program
+For analysis, run each mapper with the reducer separately and input the output stream to plotter.py to get the chart.
+For data processing, check the file structure comments 
 
  
 ## Kate
