@@ -31,7 +31,7 @@ object financeML {
     // Load training data in LIBSVM format.
     //val data = MLUtils.loadLibSVMFile(spark.sparkContext, "sample_data.txt")
 
-    val csvFile = spark.sparkContext.textFile("data.txt")
+    val csvFile = spark.sparkContext.textFile("all.csv")
     val csvNoComma = csvFile.map(line=>{
       line.split(",")
     })
