@@ -38,9 +38,10 @@ The Scala job runs three different Classification Machine Learning algorithms: N
 
 ### Labels and Feutures
 
-Label:
+**Label:**
 Amazon's stocks price daily change. 0 - Negative change. 1 - Positive change.
-Features:
+
+**Features:**
 1. Amazon Stock's price daily fluctuation
 2. Walmart's stocks price positive daily change
 3. Walmart's stocks price negative daily change
@@ -67,7 +68,7 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 The screenshots folder contians screenshots from the output and from the program running
 
-## covid (Marcus)
+## Covid (Marcus)
 
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
 
