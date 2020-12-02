@@ -40,6 +40,9 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 ## Marcus
 ## Kate
+**Description**
+My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown.
+
 ## Hive (Holly)
 **Objective:**
 <p>
