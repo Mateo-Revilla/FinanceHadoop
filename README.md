@@ -1,7 +1,6 @@
 # Finance Big Data
 
-File Structure:
-   We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
+For this project we used different Big Data tools including Hadoop Map Reduce, HiveSQL, and Spark to process and analyse data for amazon stock, walmart stock, SP500, and Covid-19
 
 ## SP500 (Mateo)
 
