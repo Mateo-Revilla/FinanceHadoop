@@ -209,11 +209,11 @@ hdfs dfs -get /user/sc6220/output/all/all.csv
 ```
 
 ## Conclusion and Analysis: ##
-![walmart vs sp](hive/walmart_s&p500.png)
-![amazon vs sp](hive/amazon_s&p500.png)
-![amazon vs walmart](hive/amazon_walmart.png)
-![sp500](hive/s&p500.png)
-![amazon](hive/amazon.png)
-![walmart](hive/walmart.png)
+![walmart vs sp](additional/hive/walmart_s&p500.png)
+![amazon vs sp](additional/hive/amazon_s&p500.png)
+![amazon vs walmart](additional/hive/amazon_walmart.png)
+![sp500](additional/hive/s&p500.png)
+![amazon](additional/hive/amazon.png)
+![walmart](additional/hive/walmart.png)
 <p>The scatter plots show that all three stocks are fluctuant due to other factors that impact stock price besides covid, however we see that both amazon and walmart display a downward sloping trend as the number of covid cases rises, while S&P 500 stay mostly unaffected. Amazon stock goes down slightly more than walmart stock due to covid, perhaps due to the fact that Walmart sells daily essentials while more of Amazon's business is comprised of luxury goods. An assumption can be made and further explored that in terms of grocery purchasing, people still favor in-person stock Walmart to Amazon's delivery service although there is a high risk of catching the virus, perhaps due to people's need to get out of the house during the quarentine.
 </p>
