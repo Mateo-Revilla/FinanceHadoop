@@ -2,52 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab50cb04-fd21-4d5f-a038-cda2135a7d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/predict.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_csv.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/financeSpark.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/financeML.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Spark-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Spark-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Spark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Spark.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0aa72395fe8973d1cce5$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0aa72395fe8973d1cce5.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0aa72395fe8973d1cce5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$25c65b30e5b28a84ea27$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$25c65b30e5b28a84ea27.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$25c65b30e5b28a84ea27.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a58c81910ff0f65f155d$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a58c81910ff0f65f155d.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a58c81910ff0f65f155d.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a816d5f92cefa66ed1c2$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a816d5f92cefa66ed1c2.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a816d5f92cefa66ed1c2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ac69d311e7dd3b5b55a4$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ac69d311e7dd3b5b55a4.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ac69d311e7dd3b5b55a4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c360bf88ee3bc914627e$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c360bf88ee3bc914627e.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c360bf88ee3bc914627e.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$dac5ff91d670240548dc$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$dac5ff91d670240548dc.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$dac5ff91d670240548dc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/helloworld.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/test.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/helloworld$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/helloworld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/test$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_csv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/financeSpark.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/financeSpark.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/financeML.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/financeML.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,11 +253,11 @@
     <state x="1454" y="-926" key="SettingsEditor/0.23.1792.1021/662.-1057.1920.1057@662.-1057.1920.1057" timestamp="1606597375154" />
     <state x="739" y="150" key="SettingsEditor/0.23.1792.1021@0.23.1792.1021" timestamp="1606527343922" />
     <state x="1454" y="-935" key="SettingsEditor/0.23.1792.1097/662.-1057.1920.981@662.-1057.1920.981" timestamp="1606608856423" />
-    <state x="943" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1606897264830">
+    <state x="943" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1606900513666">
       <screen x="0" y="23" width="1792" height="1021" />
     </state>
     <state x="943" y="344" key="com.intellij.ide.util.TipDialog/0.23.1792.1021/662.-1057.1920.1057@0.23.1792.1021" timestamp="1606857098328" />
-    <state x="943" y="344" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1606897264829" />
+    <state x="943" y="344" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1606900513666" />
     <state x="1014" y="23" width="778" height="576" key="dock-window-1" timestamp="1606770952998">
       <screen x="0" y="23" width="1792" height="1021" />
     </state>

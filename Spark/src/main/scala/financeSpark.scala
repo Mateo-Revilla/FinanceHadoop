@@ -31,7 +31,7 @@ object financeSpark {
     // Load training data in LIBSVM format.
     //val data = MLUtils.loadLibSVMFile(spark.sparkContext, "sample_data.txt")
 
-    val csvFile = spark.sparkContext.textFile("sample_csv.txt")
+    val csvFile = spark.sparkContext.textFile("data.txt")
     val csvNoComma = csvFile.map(line=>{
       line.split(",")
     })
@@ -84,7 +84,7 @@ object financeSpark {
 
 
 
-      LabeledPoint(label, Vectors.dense(flucA, changePosW, changeNegW, casesCovid, deathsCovid, changeNegSP, changePosSP, flucSP))
+      LabeledPoint(label, Vectors.dense(flucA, changePosW, changeNegW, casesCovid, deathsCovid, changePosSP,changeNegSP, flucSP))
     })
 
     var naiveBayesResults = ArrayBuffer[Double]()

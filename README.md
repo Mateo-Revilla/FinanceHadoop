@@ -1,11 +1,45 @@
-# Mateo
-# Marcus
-# Kate
-# Hive (Holly)
+#Finance Big Data
+## Spark MlLib (Mateo)
+###Description
+<p>
+The spark folder contains a machine learning job written in Scala using Spark MlLib.
+The functionality of this job is to use machine learning to try and see to what extent amazon stock's price is predictable by Walmart Stock Price, SP500, and Covid data.
+</p>
+###Machine Learning Algorithms
+<p>
+The Scala job runs three different Classification Machine Learning algorithms: Naive Bayes, Logistic Regression, and Random Forest.
+</p>
+###Labels and Feutures
+<p>
+Label:
+Amazon's stocks price daily change. 0 - Negative change. 1 - Positve change.
+Feutures:
+1. Amazon Stock's price daily fluctuation
+2. Walmart's stocks price positive daily change
+3. Walmart's stocks price negative daily change
+4. Covid daily cases count
+5. Covid daily deaths count
+6. SP500's price positive daily change
+7. SP500's price negative daily change
+8. SP500's price daily fluctuation
+</p>
+###Training Models and Testing
+<p>
+All three machine learning models are trained and tested for their accuracy a total of 10 times using different seeds to separate the training 75% and testing data 25%.
+Each model has a corresponding array holding the accuracy results for each run as well as a sum variable to later calculate the average.
+</p>
+###Input and output
+The job takes as input the file data.txt which is in csv format and from it generates a  RDD containing a collection of LabeledPoints. It then outputs the average accuracy for each model and accuracy results for each run to output.txt.
+###Running the program
+This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
+
+## Marcus
+##Kate
+## Hive (Holly)
 **Objective:**
 <p>
-This file describe the step-by-step commandline issues to use hive to combine different datasets and calculating indexs that we designed using various fields in various datasets. 
-	
+This file describe the step-by-step commandline issues to use hive to combine different datasets and calculating indexs that we designed using various fields in various datasets.
+
 We are using datasets from the clean_data_source folder which contains 4 csv files, with daily stock prices from three stocks (Amazon, Walmart, and S&P 500)and daily cases all marked by dates. Previously, we have cleaned up the stock prices using MapReduce (code attatched in the folder DataCleaning/clean) to calculate the percentage change and percentage fluctuation from day to day. The purpose of this project is to combine the tables by dates (discarding the dates that the datasets do not have in common), and look at the relation between covid cases (as independent variables) and change in stock price of each companies (dependent variables) as well as comparing stock price change between companies as a result of covid.
 
 For the comparison between stocks, we are looking at Amazon and Walmart separately using S&P 500 as a baseline for the general economic performance during covid, and we are also comparing Amazon and Walmart to see the differences between how they perform under the influence of covid.
@@ -24,7 +58,7 @@ Attatchment folder explaination:
 6. [individual.xlsm](individual.xlsm): excel spreadsheet combining all data in results folder that compares single stocks and its relation to covid, along with a trendline graph for each relation that we are looking at
 </p>
 
-	
+
 
 **Step 1. Setup codes:**
 ```
@@ -83,7 +117,7 @@ create table asc as select amazon.*,sp.*,covid.* from amazon join sp on (amazon.
 
 **Step 5. Create new result tables with calculated independent and dependent variable pairs we are looking at**
 Compare difference of percentage stock price change:
-	
+
 (1) rawc: {%change amazon - %change walmart, covid infection}
 ```
 create table rawc as select infected, (apc - wpc) as diff_pc from awc;
@@ -165,7 +199,7 @@ create table all as select amazon.*,walmart.*,covid.*,sp.* from amazon join walm
 
 	hdfs dfs -get /user/sc6220/output/all/all.csv
 ```
-	
+
 ## Conclusion and Analysis: ##
 ![walmart vs sp](walmart_s&p500.png)
 ![amazon vs sp](amazon_s&p500.png)
