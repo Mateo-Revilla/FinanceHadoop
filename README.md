@@ -1,8 +1,5 @@
 # Finance Big Data
 
-File Structure:
-   We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
-
 ## Spark MlLib (Mateo)
 
 ### Description
@@ -42,6 +39,24 @@ The job takes as input the file data.txt which is in csv format and from it gene
 This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
 
 ## Marcus
+**Description**
+My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
+
+The code has 4 different mappers that have to be run separately with the reducer to produce 4 different outputs.
+
+1. COVID cases vs S&P 500 change
+2. COVID deaths vs S&P 500 change
+3. COVID cases vs S&P 500 fluctuation
+4. COVID deaths vs S&P 500 fluctuation
+
+ The input data is in covid-vs-sp500 folder, a file called `all.csv`. The outputs of the mapreduce pairs should be fed in to 
+ plotter.py to generate plots that illustrate the relationships. 
+
+ **File structure**
+ [covid-clean] has COVID data exploration mapreduce mapper reducer pairs.
+ [covid-vs-sp500] has COVID vs S&P 500 analysis, visualization
+
+ 
 ## Kate
 **Description**
 My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown.
