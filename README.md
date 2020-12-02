@@ -64,6 +64,10 @@ The job takes as input the file data.txt which is in csv format and from it gene
 
 This Spark job can very easily be run locally by using an IDE like IntelliJ and sbt as the build tool.
 
+### Screenshots
+
+The screenshots folder contians screenshots from the output and from the program running
+
 ## Marcus
 **Description**
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
