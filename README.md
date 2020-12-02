@@ -1,6 +1,6 @@
 # Finance Big Data
 
-For this project we used different Big Data tools including Hadoop Map Reduce, HiveSQL, and Spark to process and analyse data for amazon stock, walmart stock, SP500, and Covid-19.
+For this project we used different Big Data tools including Hadoop Map Reduce, HiveSQL, and Spark to process and analyse data for amazon stock, walmart stock, SP500, and Covid-19
 
 ## SP500 (Mateo)
 
@@ -38,10 +38,9 @@ The Scala job runs three different Classification Machine Learning algorithms: N
 
 ### Labels and Feutures
 
-**Label:**
+Label:
 Amazon's stocks price daily change. 0 - Negative change. 1 - Positive change.
-
-**Features:**
+Features:
 1. Amazon Stock's price daily fluctuation
 2. Walmart's stocks price positive daily change
 3. Walmart's stocks price negative daily change
@@ -66,9 +65,9 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 ### Screenshots
 
-The screenshots folder contians screenshots from the output and from the program running.
+The screenshots folder contians screenshots from the output and from the program running
 
-## Covid (Marcus)
+## Marcus
 
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
 
@@ -100,7 +99,7 @@ For analysis, run each mapper with the reducer separately and input the output s
 For data processing, check the file structure comments 
 
  
-## AmazonAndLockdown(ACAP) (Kate)
+## Kate
 
 **Description**
 
@@ -118,7 +117,8 @@ Extensive screenshots are provided which detail how the code is run, as well as 
 4. ACAPS (lockdown) data + Covid data vs. WMT stock
 5. ACAPS (lockdown) data vs. Covid data 
 6. ACAPS (lockdown) data
-This dataset 
+
+This is a large dataset of all of the government restrictions (and rollbacks of said restrictions) imposed by (nearly) every country in the world. Our analysis selects for only those which affect the US and the assisgns a "restriction" score to each date, which is the total number of restrictions implemented by the US government on that day subtracted by the number of restrictions rolled back on that day. This aims to get a measure of the degree to which each day represented a rollback of measures (such as lockdown measures or mask mandates) or the implemenataion of them.
 
 ## Hive (Holly)
 **Objective:**
