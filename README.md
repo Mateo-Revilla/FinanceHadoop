@@ -1,22 +1,29 @@
 # Finance Big Data
 
+File Structure:
+   We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
+
 ## SP500 (Mateo)
 
 ### Description
 
-We used t
+This folder contains the ingestion and running of the SP500 dataset
 
 ### Data Ingestion
 
+The data ingestion folder contains a PDF with the isntruction on how the data was ingested first by downloading it from Yahoo and then transfering it to HDFS
+
 ### Data Cleaning and Profiling
+
+In order to clean and profile the data a map Reduce job was done. It is contained under the folder Map Reduce Cleaning and Profiling. In this job we calculated the SP500 daily price fluctuation and daily price change.
 
 ### Screenshots
 
+The screenshots folder contains screenshots of the Map Reduce Job running.
+
 ### Running MapReduce in Dumbo
 
-
-File Structure:
-   We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
+hadoop jar clean.jar Clean /user/mr5246/FinanceProject/SP500.csv /user/mr5246/FinanceProject/newOutput/cleanSP500
 
 ## Spark MlLib (Mateo)
 
