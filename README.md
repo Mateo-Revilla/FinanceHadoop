@@ -15,6 +15,8 @@ We used t
 ### Running MapReduce in Dumbo
 
 
+File Structure:
+   We have ana_code, data_ingest, etl_code, profiling_code, screenshot per description with subfolders in each folder for each sub project
 
 ## Spark MlLib (Mateo)
 
