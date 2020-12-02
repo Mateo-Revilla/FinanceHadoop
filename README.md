@@ -56,6 +56,9 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 ## Marcus
 ## Kate
+**Description**
+My code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. My code cleans the Amazon data (AMZNDataCleaning), cleans the ACAPS data and uses MapReduce to sum up the total number of restrictions implemented in the US per day and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown.
+
 ## Hive (Holly)
 **Objective:**
 <p>
@@ -64,22 +67,6 @@ This file describe the step-by-step commandline issues to use hive to combine di
 We are using datasets from the clean_data_source folder which contains 4 csv files, with daily stock prices from three stocks (Amazon, Walmart, and S&P 500)and daily cases all marked by dates. Previously, we have cleaned up the stock prices using MapReduce (code attatched in the folder DataCleaning/clean) to calculate the percentage change and percentage fluctuation from day to day. The purpose of this project is to combine the tables by dates (discarding the dates that the datasets do not have in common), and look at the relation between covid cases (as independent variables) and change in stock price of each companies (dependent variables) as well as comparing stock price change between companies as a result of covid.
 
 For the comparison between stocks, we are looking at Amazon and Walmart separately using S&P 500 as a baseline for the general economic performance during covid, and we are also comparing Amazon and Walmart to see the differences between how they perform under the influence of covid.
-
-Attatchment folder explaination:
-1. [DataCleaning](hive/DataCleaning/): Data cleaning code with sample original input file WMT.csv (for walmart) downloaded from yahoo.finance.com. The result of data cleaning is stored in the folder (cleaned_data_source). If you want to reproduce analytic from the same data, you can skip the cleaning step and use the clean data from there
-
-2. [TerminalOutput.txt](hive/TerminalOutput.txt): terminal output in txt format (just for reference of what the commandline printout should look like when you do the right steps, to reproduce the analytic please still follow instructions below, make sure to configure the directory accordingly)
-
-3. [commandline_screenshots](hive/commandline_screenshots/): screenshots of terminal command, you should not need to use this at all because everything is documented in (2), just a prove that the code works
-
-4. [results](hive/results/): final analyzed data obtained from hdfs, containing 6 cvs files with parameters that we created (difference between two stocks in daily percentage change of stock or daily percentage change for one stock) and the covid cases that matches the dates
-
-5. [comparison.xlsm](hive/comparison.xlsm): excel spreadsheet combining all data in results folder that compares two stocks and their relation to covid, along with a trendline graph for each relation that we are looking at
-
-6. [individual.xlsm](hive/individual.xlsm): excel spreadsheet combining all data in results folder that compares single stocks and its relation to covid, along with a trendline graph for each relation that we are looking at
-</p>
-
-
 
 **Step 1. Setup codes:**
 ```
@@ -222,11 +209,11 @@ hdfs dfs -get /user/sc6220/output/all/all.csv
 ```
 
 ## Conclusion and Analysis: ##
-![walmart vs sp](hive/walmart_s&p500.png)
-![amazon vs sp](hive/amazon_s&p500.png)
-![amazon vs walmart](hive/amazon_walmart.png)
-![sp500](hive/s&p500.png)
-![amazon](hive/amazon.png)
-![walmart](hive/walmart.png)
+![walmart vs sp](additional/hive/walmart_s&p500.png)
+![amazon vs sp](additional/hive/amazon_s&p500.png)
+![amazon vs walmart](additional/hive/amazon_walmart.png)
+![sp500](additional/hive/s&p500.png)
+![amazon](additional/hive/amazon.png)
+![walmart](additional/hive/walmart.png)
 <p>The scatter plots show that all three stocks are fluctuant due to other factors that impact stock price besides covid, however we see that both amazon and walmart display a downward sloping trend as the number of covid cases rises, while S&P 500 stay mostly unaffected. Amazon stock goes down slightly more than walmart stock due to covid, perhaps due to the fact that Walmart sells daily essentials while more of Amazon's business is comprised of luxury goods. An assumption can be made and further explored that in terms of grocery purchasing, people still favor in-person stock Walmart to Amazon's delivery service although there is a high risk of catching the virus, perhaps due to people's need to get out of the house during the quarentine.
 </p>
