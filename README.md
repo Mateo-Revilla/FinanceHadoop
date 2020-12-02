@@ -198,11 +198,11 @@ for combining all data needed for analysis into the same csv file
 ```
 create table all as select amazon.*,walmart.*,covid.*,sp.* from amazon join walmart on (amazon.adate = walmart.wdate) join covid on (walmart.wdate = covid.cdate) join sp on (covid.cdate = sp.sdate);
 
-	insert overwrite directory '/user/sc6220/output/all' row format delimited fields terminated by ',' lines terminated by "\n" select adate,apflux, apc,wpflux,wpc,spflux,spc,infected,death from all;
+insert overwrite directory '/user/sc6220/output/all' row format delimited fields terminated by ',' lines terminated by "\n" select adate,apflux, apc,wpflux,wpc,spflux,spc,infected,death from all;
 
-	hadoop fs -mv /user/sc6220/output/all/000000_0 /user/sc6220/output/all/all.csv
+hadoop fs -mv /user/sc6220/output/all/000000_0 /user/sc6220/output/all/all.csv
 
-	hdfs dfs -get /user/sc6220/output/all/all.csv
+hdfs dfs -get /user/sc6220/output/all/all.csv
 ```
 
 ## Conclusion and Analysis: ##
