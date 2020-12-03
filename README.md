@@ -300,34 +300,34 @@ create table sc as select infected, spc as pchange from asc;
 **Step 6. Export hive table to hdfs and then local filesystem as csv**
 in beeline:
 ```
-insert overwrite directory '/user/sc6220/output/awc' row format delimited fields terminated by ',' lines terminated by "\n" select * from rawc;
-insert overwrite directory '/user/sc6220/output/wsc' row format delimited fields terminated by ',' lines terminated by "\n" select * from rwsc;
-insert overwrite directory '/user/sc6220/output/asc' row format delimited fields terminated by ',' lines terminated by "\n" select * from rasc;
+insert overwrite directory '/user/$USERNAME/output/awc' row format delimited fields terminated by ',' lines terminated by "\n" select * from rawc;
+insert overwrite directory '/user/$USERNAME/output/wsc' row format delimited fields terminated by ',' lines terminated by "\n" select * from rwsc;
+insert overwrite directory '/user/$USERNAME/output/asc' row format delimited fields terminated by ',' lines terminated by "\n" select * from rasc;
 
-insert overwrite directory '/user/sc6220/output/ac' row format delimited fields terminated by ',' lines terminated by "\n" select * from ac;
-insert overwrite directory '/user/sc6220/output/wc' row format delimited fields terminated by ',' lines terminated by "\n" select * from wc;
-insert overwrite directory '/user/sc6220/output/sc' row format delimited fields terminated by ',' lines terminated by "\n" select * from sc;
+insert overwrite directory '/user/$USERNAME/output/ac' row format delimited fields terminated by ',' lines terminated by "\n" select * from ac;
+insert overwrite directory '/user/$USERNAME/output/wc' row format delimited fields terminated by ',' lines terminated by "\n" select * from wc;
+insert overwrite directory '/user/$USERNAME/output/sc' row format delimited fields terminated by ',' lines terminated by "\n" select * from sc;
 ```
 in hadoop (rename file)
 ```
-hadoop fs -mv /user/sc6220/output/awc/000000_0 /user/sc6220/output/awc/awc.csv
-hadoop fs -mv /user/sc6220/output/asc/000000_0 /user/sc6220/output/asc/asc.csv
-hadoop fs -mv /user/sc6220/output/wsc/000000_0 /user/sc6220/output/wsc/wsc.csv
+hadoop fs -mv /user/$USERNAME/output/awc/000000_0 /user/$USERNAME/output/awc/awc.csv
+hadoop fs -mv /user/$USERNAME/output/asc/000000_0 /user/$USERNAME/output/asc/asc.csv
+hadoop fs -mv /user/$USERNAME/output/wsc/000000_0 /user/$USERNAME/output/wsc/wsc.csv
 
-hadoop fs -mv /user/sc6220/output/ac/000000_0 /user/sc6220/output/ac/ac.csv
-hadoop fs -mv /user/sc6220/output/wc/000000_0 /user/sc6220/output/wc/wc.csv
-hadoop fs -mv /user/sc6220/output/sc/000000_0 /user/sc6220/output/sc/sc.csv
+hadoop fs -mv /user/$USERNAME/output/ac/000000_0 /user/$USERNAME/output/ac/ac.csv
+hadoop fs -mv /user/$USERNAME/output/wc/000000_0 /user/$USERNAME/output/wc/wc.csv
+hadoop fs -mv /user/$USERNAME/output/sc/000000_0 /user/$USERNAME/output/sc/sc.csv
 ```
 
 create a new directory in dumbo to store result from hdfs:
 ```
-hdfs dfs -get /user/sc6220/output/awc/awc.csv
-hdfs dfs -get /user/sc6220/output/asc/asc.csv
-hdfs dfs -get /user/sc6220/output/wsc/wsc.csv
+hdfs dfs -get /user/$USERNAME/output/awc/awc.csv
+hdfs dfs -get /user/$USERNAME/output/asc/asc.csv
+hdfs dfs -get /user/$USERNAME/output/wsc/wsc.csv
 
-hdfs dfs -get /user/sc6220/output/ac/ac.csv
-hdfs dfs -get /user/sc6220/output/wc/wc.csv
-hdfs dfs -get /user/sc6220/output/sc/sc.csv
+hdfs dfs -get /user/$USERNAME/output/ac/ac.csv
+hdfs dfs -get /user/$USERNAME/output/wc/wc.csv
+hdfs dfs -get /user/$USERNAME/output/sc/sc.csv
 ```
 
 
@@ -342,9 +342,9 @@ for combining all data needed for analysis into the same csv file
 ```
 create table all as select amazon.*,walmart.*,covid.*,sp.* from amazon join walmart on (amazon.adate = walmart.wdate) join covid on (walmart.wdate = covid.cdate) join sp on (covid.cdate = sp.sdate);
 
-insert overwrite directory '/user/sc6220/output/all' row format delimited fields terminated by ',' lines terminated by "\n" select adate,apflux, apc,wpflux,wpc,spflux,spc,infected,death from all;
+insert overwrite directory '/user/$USERNAME/output/all' row format delimited fields terminated by ',' lines terminated by "\n" select adate,apflux, apc,wpflux,wpc,spflux,spc,infected,death from all;
 
-hadoop fs -mv /user/sc6220/output/all/000000_0 /user/sc6220/output/all/all.csv
+hadoop fs -mv /user/$USERNAME/output/all/000000_0 /user/$USERNAME/output/all/all.csv
 
 hdfs dfs -get /user/sc6220/output/all/all.csv
 ```
