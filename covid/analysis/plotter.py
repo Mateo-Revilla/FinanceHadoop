@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
-save = False
+save = True
 
 l = [(line[0], line[1]) for line in csv.reader(sys.stdin)]
 covid_arg, stock_arg = l[0]
@@ -36,7 +36,8 @@ plt.ylabel("Percent change")
 
 if save:
     plt.savefig(covid_arg + '-' + stock_val + '.png')
-plt.show()
+else:
+    plt.show()
 
 
 
