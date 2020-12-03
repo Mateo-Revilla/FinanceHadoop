@@ -1,0 +1,108 @@
+Analysis and Comments:
+Analysis: I used analysis in order to observe the trends and relationships in the data.
+
+Fluctuation AMZN: 
+select * from fluctuationAMZN where acaprestrictions <0
+select * from fluctuationAMZN where acaprestrictions <9
+These commands serve to look at how the percent fluctuation in AMZN stock prices reflects the ACAP data by looking at the extremes of that data -- we see that the numbers are relatively similar, and although the sample size is small, the average fluctuation is higher when government measures increases, rather than decrease. 
+This is for an average of 0.06132616289 for > 9 and 0.04674151105 for < 0
+
+I also found the maximum fluctuation, which is: 0.09492699801921844
+
+fluctuationWMT: 
+select * from fluctuationWMT where acaprestrictions <0
+select * from fluctuationWMT where acaprestrictions <9
+
+Shown below: fluctuationavw: volavw: changeavw: 
+
+select m.acaprestrictions, m.changeDisparity from 
+(select acaprestrictions, max(changeDisparity) as changeDisparity from changeavw group by acaprestrictions) m;
+
++---------------------+----------------------+--+
+| m.acaprestrictions  |  m.changedisparity   |
++---------------------+----------------------+--+
+| -2                  | 0.43554234504699707  |
+| -1                  | 0.4938066303730011   |
+| 1                   | 2.3556158542633057   |
+| 2                   | 4.041253089904785    |
+| 3                   | 1.9215314388275146   |
+| 4                   | 5.168025016784668    |
+| 5                   | 1.3840827941894531   |
+| 6                   | 2.2783985137939453   |
+| 7                   | 3.141855478286743    |
+| 8                   | 1.5108857154846191   |
+| 9                   | -1.9423860311508179  |
+| 10                  | 4.588355541229248    |
++---------------------+----------------------+--+
+
+Thus, the greatest change disparity in the favor of Amazon over Walmart occurred when acap restrictions were positive values; however, this may be due to there being more dates in the dataset with positive values.
+
+select acaprestrictions, avg(changeDisparity)
+from ( select distinct acaprestrictions, changeDisparity from changeavw
+) m
+group by acaprestrictions;
+
+PERCENT CHANGE
++-------------------+-----------------------+--+
+| acaprestrictions  |          _c1          |
++-------------------+-----------------------+--+
+| -2                | 0.43554234504699707   |
+| -1                | -0.8089059442281723   |
+| 1                 | 0.03794013725386725   |
+| 2                 | 0.14107692352420576   |
+| 3                 | -0.861364192196301    |
+| 4                 | -0.4819073736667633   |
+| 5                 | -0.40023970901966094  |
+| 6                 | 0.6029627037545046    |
+| 7                 | -1.2999564409255981   |
+| 8                 | -1.4397472341855366   |
+| 9                 | -3.6676458716392517   |
+| 10                | 2.6554318368434906    |
++-------------------+-----------------------+--+
+This table seemingly implies that the difference in percentage change between Amazon's stock and that of Walmart's stock decreases as government restrictions increase. 
+
+select acaprestrictions, avg(volDisparity)
+from ( select distinct acaprestrictions, volDisparity from volavw
+) m
+group by acaprestrictions;
+
+VOLUME
++-------------------+----------------------+--+
+| acaprestrictions  |         _c1          |
++-------------------+----------------------+--+
+| -2                | 1484000.0            |
+| -1                | -1.002E7             |
+| 1                 | -3794733.3333333335  |
+| 2                 | -4100418.918918919   |
+| 3                 | -7501071.428571428   |
+| 4                 | -3696370.0           |
+| 5                 | -2881700.0           |
+| 6                 | -4862066.666666667   |
+| 7                 | -8984150.0           |
+| 8                 | -9514300.0           |
+| 9                 | -5721400.0           |
+| 10                | -7122050.0           |
++-------------------+----------------------+--+
+
+
+FLUCTUATION
+select acaprestrictions, avg(fluctuationDisparity)
+from ( select distinct acaprestrictions, fluctuationDisparity from fluctuationavw
+) m
+group by acaprestrictions;
++-------------------+----------------------+--+
+| acaprestrictions  |         _c1          |
++-------------------+----------------------+--+
+| -2                | -1.1408913135528564  |
+| -1                | -2.449442148208618   |
+| 1                 | -1.825284218788147   |
+| 2                 | -2.3119187532244503  |
+| 3                 | -3.3831842797143117  |
+| 4                 | -3.0786471128463746  |
+| 5                 | -2.9669749796390534  |
+| 6                 | -3.0908145109812417  |
+| 7                 | -6.475750923156738   |
+| 8                 | -6.513500849405925   |
+| 9                 | -6.135161757469177   |
+| 10                | -5.7786736488342285  |
++-------------------+----------------------+--+
