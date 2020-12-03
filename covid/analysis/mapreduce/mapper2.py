@@ -10,7 +10,7 @@ d = {
     "sp change" : 6,
     "deaths" : 8
 }
-stock_arg = "sp changes"
+stock_arg = "sp change"
 covid_arg = "deaths"
 
 for index, line in enumerate(csv.reader(sys.stdin)):
