@@ -106,8 +106,8 @@ covid
    └── plotter.py              # Output of each mapreduce jobs for `mapreduce` should be fed in plotter to create a chart
 |
 ├── results                    # folder that has mapreduce outputs, charts, screenshots of code running
-├–– all.csv
-└–– us-covid.csv
+├–– all.csv                    # joined, cleaned dataset
+└–– us-covid.csv               # raw data
 ```
 
 #### Running the program
