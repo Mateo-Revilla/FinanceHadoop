@@ -67,6 +67,13 @@ This Spark job can very easily be run locally by using an IDE like IntelliJ and 
 
 The screenshots folder contians screenshots from the output and from the program running
 
+### Accuracy Results Tables
+
+![average](additional/spark/average.png)
+![NB](additional/spark/NB.png)
+![LR](additional/spark/LR.png)
+![RF](additional/spark/RF.png)
+
 ## Covid (Marcus)
 
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
