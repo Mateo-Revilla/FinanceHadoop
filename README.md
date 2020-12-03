@@ -184,15 +184,15 @@ This is shown in the program as the table changeavw.
 
 Input files: 
 
-acaps_covid19 for ACAPS data (found at this link https://www.acaps.org/covid-19-government-measures-dataset)
+**acaps_covid19.csv** for ACAPS data (source: https://www.acaps.org/covid-19-government-measures-dataset)
 
    ACAPv6 is the output of the data cleaning and thus the input to the hive table
 
-AMZN.csv for Amazon data (found at this link https://finance.yahoo.com/quote/AMZN/history?p=AMZN)
+**AMZN.csv** for Amazon data (source: https://finance.yahoo.com/quote/AMZN/history?p=AMZN)
 
    AMZNv3 is the output of the data cleaning and thus the input to the hive table
 
-walmart.csv for walmart data (Source is from Holly, her section details the cleaning of this code from its true original source)
+**walmart.csv** for walmart data (Source is from Holly, her section details the cleaning of this code from its true original source)
 
 
 #### Documentation and Method
