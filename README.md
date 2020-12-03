@@ -76,6 +76,7 @@ The screenshots folder contians screenshots from the output and from the program
 
 ## Covid (Marcus)
 
+
 My code analyses how covid cases/deaths relate to S&P 500 trading data over the pandemic
 
 The code has 4 different mappers that have to be run separately with the reducer to produce 4 different outputs.
@@ -92,6 +93,7 @@ The code has 4 different mappers that have to be run separately with the reducer
 
 ```
 covid
+├── runall.sh                  # script I used to run all the hadoop jobs on my Dumbo cluster
 ├── data-processing
    ├── clean                   # MapReduce job that cleans `us-covid.csv` to `covid-data-clean.csv`
    ├── count                   # Counts the number of rows in an arbitrary input file
@@ -103,6 +105,7 @@ covid
    ├── mapreduce               # 4 mappers and 1 reducer, 4 different jobs, produce separate output for each, input file - `all.csv`
    └── plotter.py              # Output of each mapreduce jobs for `mapreduce` should be fed in plotter to create a chart
 |
+├── results                    # folder that has mapreduce outputs, charts, screenshots of code running
 ├–– all.csv
 └–– us-covid.csv
 ```
@@ -110,7 +113,7 @@ covid
 #### Running the program
 For analysis, run each mapper with the reducer separately and input the output stream to plotter.py to get the chart.
 For data processing, check the file structure comments
-
+For more information, check the screenshots in `results` folder
  
 ## Amazon and Government Restrictions (Lockdown) (Kate)
 
