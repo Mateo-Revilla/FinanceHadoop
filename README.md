@@ -114,15 +114,15 @@ For data processing, check the file structure comments
  
 ## Amazon and Government Restrictions (Lockdown) (Kate)
 
-#### Description
+### Description
 
 This code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. This code cleans the Amazon data (AMZNDataCleaning), and cleans and analyzses the lockdown data and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown. It also includes covid data as an additional measure. 
 
-#### Running the Program**
+### Running the Program
 
 Extensive screenshots are provided which detail how the code is run, as well as documment some of the progress in writing the code. Everything is accomplished through the use of Hive and MapReduce, and no external methods (other than Hadoop) are used, as is documented. 
 
-#### Data Cleaning
+### Data Cleaning
 
 The running of all of these (including the commands I used) are demonstrated in the screenshots provided.
 The data cleaning files include:
@@ -145,7 +145,7 @@ The ACAPS data is from an organization called ACAPS and is a large dataset of al
 Since this program also uses the Walmart data that Holly worked on, this program does NOT actually clean the walmart data (since that has already been done), instead, it reformats it in order to fit the specifications of my program by making minor adjustments to the date and column order. It is a MapReduce program.
 
 
-#### Features and Analysis
+### Features and Analysis
 The first piece of analysis 
 
 The running of all of these (including the commands I used) are demonstrated in the screenshots provided. 
