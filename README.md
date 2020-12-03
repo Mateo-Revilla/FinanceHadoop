@@ -114,24 +114,88 @@ For data processing, check the file structure comments
  
 ## Amazon and Government Restrictions (Lockdown) (Kate)
 
-**Description**
+#### Description
 
 This code works to compare the two Amazon and Walmart datasets with government lockdown data on Covid. The government lockdown data is from the organization ACAPS and the other two datasets were mentioned previously. This code cleans the Amazon data (AMZNDataCleaning), and cleans and analyzses the lockdown data and reformats Holly's Walmart data to match the Hive table formatting I used (formatWMT). Then, these are subsequently analyzed as shown. It also includes covid data as an additional measure. 
 
-**Running the Program**
+#### Running the Program**
 
 Extensive screenshots are provided which detail how the code is run, as well as documment some of the progress in writing the code. Everything is accomplished through the use of Hive and MapReduce, and no external methods (other than Hadoop) are used, as is documented. 
 
-**Features**
+#### Data Cleaning
 
-1. ACAPS (lockdown) data vs. AMZN stock
-2. ACAPS (lockdown) data + Covid data vs. AMZN stock
-3. ACAPS (lockdown) data vs. WMT stock
-4. ACAPS (lockdown) data + Covid data vs. WMT stock
-5. ACAPS (lockdown) data vs. Covid data 
-6. ACAPS (lockdown) data
+The running of all of these (including the commands I used) are demonstrated in the screenshots provided.
+The data cleaning files include:
 
-This is a large dataset of all of the government restrictions (and rollbacks of said restrictions) imposed by (nearly) every country in the world. Our analysis selects for only those which affect the US and the assisgns a "restriction" score to each date, which is the total number of restrictions implemented by the US government on that day subtracted by the number of restrictions rolled back on that day. This aims to get a measure of the degree to which each day represented a rollback of measures (such as lockdown measures or mask mandates) or the implemenataion of them.
+
+**Amazon: includes AMZN.java, AMZNmap.java, AMZNreduce.java**
+
+This cleans all of the Amazon data, and calculates the change from the opening price (as a percent) and the percent fluctuation in addition to re-formatting the data as well. This is through MapReduce. 
+
+
+
+**ACAPS: includes ACAP.java, ACAPmap.java, ACAPreduce.java (files also include analysis)**
+
+The ACAPS data is from an organization called ACAPS and is a large dataset of all of the government restrictions (and rollbacks of said restrictions) imposed by (nearly) every country in the world. Our analysis selects for only those which affect the US and the assisgns a "restriction" score to each date, which is the total number of restrictions implemented by the US government on that day subtracted by the number of restrictions rolled back on that day. This aims to get a measure of the degree to which each day represented a rollback of measures (such as lockdown measures or mask mandates) or the implemenataion of them.
+
+
+
+**formatWMT: includes formatWMT.java, formatWMTmap.java, formatWMTreduce.java**
+
+Since this program also uses the Walmart data that Holly worked on, this program does NOT actually clean the walmart data (since that has already been done), instead, it reformats it in order to fit the specifications of my program by making minor adjustments to the date and column order. It is a MapReduce program.
+
+
+#### Features and Analysis
+The first piece of analysis 
+
+The running of all of these (including the commands I used) are demonstrated in the screenshots provided. 
+
+**1. ACAPS (restrictions) data vs. AMZN stock (fluctuation)**
+
+This is shown in the program as the table fluctuationAMZN. This compares the Amazon stock fluctuation on a give date with the government restriction score for that day. 
+select * from fluctuationAMZN where acaprestrictions <0
+select * from fluctuationAMZN where acaprestrictions <9
+These commands serve to look at how the percent fluctuation in AMZN stock prices reflects the ACAP data by looking at the extremes of that data -- we see that the numbers are relatively similar, and although the sample size is small, the average fluctuation is higher when government measures increases, rather than decrease. 
+This is for an average of 0.06132616289 for > 9 and 0.04674151105 for < 0
+
+I also found the maximum fluctuation, which is: 0.09492699801921844. 
+
+**2. ACAPS (restrictions) data vs. WMT stock: fluctuationWMT**
+
+This is shown in the program as the table fluctuationWMT. This compares the Walmart stock fluctuation on a give date with the government restriction score for that day. 
+
+**3. ACAPS (restrictions) data vs. AMZN stock fluctuation - WMT stock fluctuation**
+
+This is shown in the program as the table fluctuationavw. 
+
+**4. ACAPS (restrictions) data vs. AMZN stock volume - WMT stock volume**
+
+This is shown in the program as the table volavw. 
+
+**5. ACAPS (restrictions) data vs. AMZN stock percent change - WMT stock percent change.**
+
+This is shown in the program as the table changeavw. 
+
+
+#### Input and Output
+
+Input files: 
+
+acaps_covid19 for ACAPS data (found at this link https://www.acaps.org/covid-19-government-measures-dataset)
+
+   ACAPv6 is the output of the data cleaning and thus the input to the hive table
+
+AMZN.csv for Amazon data (found at this link https://finance.yahoo.com/quote/AMZN/history?p=AMZN)
+
+   AMZNv3 is the output of the data cleaning and thus the input to the hive table
+
+walmart.csv for walmart data (Source is from Holly, her section details the cleaning of this code from its true original source)
+
+
+#### Documentation and Method
+
+The screenshots show both the output of the program and the output of it. 
+
 
 ## Hive (Holly)
 **Objective:**
