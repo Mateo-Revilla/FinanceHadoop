@@ -21,15 +21,14 @@ import java.io.PrintWriter
 object financeSpark {
   def main(args: Array[String]): Unit = {
 
-    // context for spark
+    //CONTEXT FOR SPARK
     val spark = SparkSession.builder
       .master("local[*]")
       .appName("finance")
       .getOrCreate()
 
 
-    // Load training data in LIBSVM format.
-    //val data = MLUtils.loadLibSVMFile(spark.sparkContext, "sample_data.txt")
+    //LOAD DATA
 
     val csvFile = spark.sparkContext.textFile("all.csv")
     val csvNoComma = csvFile.map(line=>{
@@ -87,6 +86,7 @@ object financeSpark {
       LabeledPoint(label, Vectors.dense(flucA, changePosW, changeNegW, casesCovid, deathsCovid, changePosSP,changeNegSP, flucSP))
     })
 
+
     var naiveBayesResults = ArrayBuffer[Double]()
     var logisticRegressionResults = ArrayBuffer[Double]()
     var randomForestResults = ArrayBuffer[Double]()
@@ -98,7 +98,7 @@ object financeSpark {
 
 
     def runModels(seed: Long) {
-      // Split data into training (60%) and test (40%).
+      // Split data into training (75%) and test (25%).
       val Array(training, test) = data.randomSplit(Array(0.75, 0.25), seed = seed)
 
 
